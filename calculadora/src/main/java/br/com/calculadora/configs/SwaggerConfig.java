@@ -28,9 +28,9 @@ public class SwaggerConfig {
         server.setDescription("Servidor de desenvolvimento");
 
         Contact contact = new Contact();
-        contact.setEmail("gabriel123.bardasson@gmail.com");
-        contact.setName("Gabriel Bardasson");
-        contact.setUrl("gabrielbardasson.com");
+        contact.setEmail("matheuslopes19963@gmail.com");
+        contact.setName("matheuslopes");
+        contact.setUrl("matheuslopes.com");
 
         License license = new License();
         license.setName("Apache 2.0");
