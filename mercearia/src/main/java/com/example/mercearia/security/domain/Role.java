@@ -1,6 +1,7 @@
-package br.com.api.teste.security.domain;
+package com.example.mercearia.security.domain;
 
-import br.com.api.teste.security.enums.RoleEnum;
+import com.example.mercearia.security.enums.RoleEnum;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

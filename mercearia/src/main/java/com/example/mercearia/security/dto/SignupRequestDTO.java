@@ -1,4 +1,4 @@
-package br.com.api.teste.security.dto;
+package com.example.mercearia.security.dto;
 
 import java.util.Set;
 

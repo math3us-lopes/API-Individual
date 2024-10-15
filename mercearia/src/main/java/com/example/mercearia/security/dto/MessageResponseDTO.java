@@ -1,4 +1,4 @@
-package br.com.api.teste.security.dto;
+package com.example.mercearia.security.dto;
 
 //transporta os dados do Resposta e mensagens da aplicação
 public class MessageResponseDTO {

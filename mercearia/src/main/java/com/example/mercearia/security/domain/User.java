@@ -1,4 +1,4 @@
-package br.com.api.teste.security.domain;
+package com.example.mercearia.security.domain;
 
 import java.util.HashSet;
 import java.util.Set;

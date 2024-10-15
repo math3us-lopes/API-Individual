@@ -1,4 +1,4 @@
-package br.com.api.teste.security.enums;
+package com.example.mercearia.security.enums;
 
 //esse enum é uma maneira de gerenciar o acesso dos usuários na aplicação
 public enum RoleEnum {

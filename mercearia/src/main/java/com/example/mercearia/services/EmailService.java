@@ -120,4 +120,14 @@ public class EmailService {
             System.out.println("Erro ao enviar email: " + e.getMessage());
         }
     }
+
+	public void writerTeste() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void writerTeste2() {
+		// TODO Auto-generated method stub
+		
+	}
 }
