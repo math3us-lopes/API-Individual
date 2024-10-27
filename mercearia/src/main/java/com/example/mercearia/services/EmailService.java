@@ -53,7 +53,7 @@ public class EmailService {
         DateTimeFormatter dateForm = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo("diogoportelladantas1234@gmail.com");
+        message.setTo("xgditx@gmail.com");
         message.setSubject("API... Não sei pra onde vou, mas sei que pra onde eu for vai dar merda");
         message.setText("Parangaricotirrimiroaro " + dateTime.format(dateForm));
 
@@ -130,4 +130,41 @@ public class EmailService {
 		// TODO Auto-generated method stub
 		
 	}
+	public void enviarEmailMercearia(String email, String pedido, String nomeProduto, Double precoProduto,
+            Integer quantidade, double totalPrice) {
+LocalDateTime localDate = LocalDateTime.now();
+DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+DecimalFormat df = new DecimalFormat("R$ #,##0.00");
+MimeMessage message = javaMailSender.createMimeMessage();
+
+try {
+MimeMessageHelper helper = new MimeMessageHelper(message, true);
+helper.setSubject("Confirmação do Pedido: " + pedido);
+helper.setTo(email);
+
+StringBuilder sbuilder = new StringBuilder();
+sbuilder.append("<html>\r\n");
+sbuilder.append("    <body>\r\n");
+sbuilder.append("        <h2>Obrigado por sua compra!</h2>\r\n");
+sbuilder.append("        <p>Data do pedido: " + localDate.format(dateFormatter) + "</p>\r\n");
+sbuilder.append("        <p>Detalhes do seu pedido:</p>\r\n");
+sbuilder.append("        <table border='1' cellpadding='5'>\r\n");
+sbuilder.append("            <tr><th>Produto</th><th>Preço</th><th>Quantidade</th><th>Total</th></tr>\r\n");
+sbuilder.append("            <tr><td>" + nomeProduto + "</td><td>" + df.format(precoProduto) + "</td>");
+sbuilder.append("<td>" + quantidade + "</td><td>" + df.format(totalPrice) + "</td></tr>\r\n");
+sbuilder.append("        </table>\r\n");
+sbuilder.append("        <p>Obrigado pela preferência!</p>\r\n");
+sbuilder.append("    </body>\r\n");
+sbuilder.append("</html>");
+
+helper.setText(sbuilder.toString(), true);
+javaMailSender.send(message);
+
+System.out.println("Email enviado com sucesso para " + email);
+} catch (MessagingException e) {
+System.out.println("Erro ao enviar email: " + e.getMessage());
+}
+}
+
+	
 }

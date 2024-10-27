@@ -7,11 +7,13 @@
 		<version>3.3.4</version>
 		<relativePath />
 	</parent>
-	<groupId>com.example</groupId>
+	
+
+<groupId>com.example</groupId>
 	<artifactId>mercearia</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>4.8.0</version>
 	<name>mercearia</name>
-	<description>Demo project for Spring Boot</description>
+	<description> Lugar onde seu atendimento tem Qualidade</description>
 	<licenses>
 		<license />
 	</licenses>
@@ -41,6 +43,39 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>0.11.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>0.11.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>0.11.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -87,7 +122,7 @@
 		<dependency>
 			<groupId>br.com</groupId>
 			<artifactId>cafe</artifactId>
-			<version>1.0.0</version>
+			<version>4.8.0</version>
 		</dependency>
 	</dependencies>
 
@@ -112,5 +147,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
 
 </project>

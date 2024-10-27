@@ -2,19 +2,15 @@ package com.example.mercearia.security.dto;
 
 import java.util.List;
 
-//responsável por trazer a resposta da autenticação do JWT - signin
 public class JwtResponseDTO {
 	
-	//definição de atributos
 	private String token;
-	//Bearer - retorna o tipo do token da requisição 
 	private String type = "Bearer";
 	private Integer id;
 	private String username;
 	private String email;
 	private List<String> roles;
 
-	//construtor parametrizado
 	public JwtResponseDTO(String accessToken, Integer id, String username, String email, List<String> roles) {
 		this.token = accessToken;
 		this.id = id;
@@ -23,7 +19,6 @@ public class JwtResponseDTO {
 		this.roles = roles;
 	}
 
-	//Getters e Setters
 	public String getAccessToken() {
 		return token;
 	}
